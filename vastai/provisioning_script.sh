@@ -8,7 +8,7 @@ set -eo pipefail
 . /venv/main/bin/activate
 
 sudo apt update
-sudo apt install neovim
+sudo apt install neovim -y
 
 git clone https://github.com/dillonalaird/dotfiles.git
 mkdir -p ~/.config/
