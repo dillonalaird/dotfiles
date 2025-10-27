@@ -9,8 +9,8 @@ set -eo pipefail
 
 git clone https://github.com/dillonalaird/dotfiles.git
 mkdir -p ~/.config/
-cp -r dotfiles/.config/nvim ~/.config/nvim
-cp dotfiles/.tmux.conf ~/.tmux.conf
+cp -r dotfiles/nvim/.config/nvim ~/.config/
+cp dotfiles/tmux/.tmux.conf ~/
 
 # Reload Supervisor
 supervisorctl reload
