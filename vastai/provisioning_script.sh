@@ -43,5 +43,10 @@ mkdir -p ~/.config/
 cp -r dotfiles/nvim/.config/nvim ~/.config/
 cp dotfiles/tmux/.tmux.conf ~/
 
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+rm awscliv2.zip
+
 # Reload Supervisor
 supervisorctl reload
