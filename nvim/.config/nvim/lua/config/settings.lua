@@ -19,5 +19,5 @@ vim.opt.encoding = "utf8"
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.termguicolors = true
-vim.opt.signcolumn = "number"
+vim.opt.signcolumn = "yes"
 vim.o.updatetime = 250
