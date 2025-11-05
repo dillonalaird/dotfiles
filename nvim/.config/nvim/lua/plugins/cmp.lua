@@ -36,6 +36,7 @@ return {
 		"hrsh7th/cmp-nvim-lua",
 		"saadparwaiz1/cmp_luasnip",
 		"L3MON4D3/LuaSnip",
+    "kdheepak/cmp-latex-symbols",
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -54,7 +55,6 @@ return {
 						nvim_lsp = "[LSP]",
 						luasnip = "[LuaSnip]",
 						nvim_lua = "[Lua]",
-						latex_symbols = "[LaTeX]",
 					})[entry.source.name]
 					return vim_item
 				end,
@@ -68,6 +68,7 @@ return {
 				{ name = "path" },
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
+        { name = "latex_symbols", option = { strategy = 0 }, },
 			}),
 			mapping = cmp.mapping.preset.insert({
 				["<C-p>"] = cmp.mapping.select_prev_item(),
