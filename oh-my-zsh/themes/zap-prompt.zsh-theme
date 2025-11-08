@@ -6,7 +6,7 @@ autoload -U colors && colors
 zstyle ':vcs_info:*' enable git 
 
 
-# precmd_vcs_info() { vcs_info }
+precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 precmd_functions+=( precmd_conda_info )
 setopt prompt_subst
