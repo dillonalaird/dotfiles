@@ -28,16 +28,16 @@ return {
     })
     vim.lsp.enable("basedpyright")
 
-    vim.lsp.config("ruff", {
-      handlers = {
-        ["textDocument/publishDiagnostics"] = vim.lsp.with(
-          vim.lsp.diagnostic.on_publish_diagnostics, {
-            update_in_insert = true,
-          }
-        ),
-      },
-    })
-    vim.lsp.enable("ruff")
+    -- vim.lsp.config("ruff", {
+    --   handlers = {
+    --     ["textDocument/publishDiagnostics"] = vim.lsp.with(
+    --       vim.lsp.diagnostic.on_publish_diagnostics, {
+    --         update_in_insert = true,
+    --       }
+    --     ),
+    --   },
+    -- })
+    -- vim.lsp.enable("ruff")
     -- vim.lsp.config("ty", {
     --   settings = {
     --     ty = {
