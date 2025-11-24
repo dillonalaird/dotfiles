@@ -19,9 +19,6 @@ return {
 					win = {
 						list = {
 							keys = {
-								["v"] = "edit_vsplit",   -- open in vertical split
-								["s"] = "edit_split",    -- open in horizontal split
-								["t"] = "tab",           -- open in new tab
 								["-"] = "explorer_up",    -- go up one directory
 							},
 						},
