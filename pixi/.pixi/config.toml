@@ -1,0 +1,3 @@
+[shell]
+# Disable pixi from modifying PS1 (shell prompt)
+change-ps1 = false
