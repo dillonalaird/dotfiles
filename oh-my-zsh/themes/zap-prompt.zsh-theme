@@ -25,7 +25,8 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 # zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:git:*' formats " %{$fg[blue]%}[%{$fg[red]%}%m%u%c%{$fg[yellow]%}%{$fg[magenta]%} %b%{$fg[blue]%}]%{$reset_color%}"
 
-PROMPT="%{$fg[green]%}󰒋 "
-PROMPT+='%{$fg[green]%}${PIXI_PROJECT_NAME:+[$PIXI_PROJECT_NAME${PIXI_ENVIRONMENT_NAME:+:$PIXI_ENVIRONMENT_NAME}] }'
+# add this to prompt if you are running on remote server
+# PROMPT="%{$fg[green]%}󰒋 "
+PROMPT='%{$fg[green]%}${PIXI_PROJECT_NAME:+[$PIXI_PROJECT_NAME${PIXI_ENVIRONMENT_NAME:+:$PIXI_ENVIRONMENT_NAME}] }'
 PROMPT+="%B%{$fg[yellow]%}% %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )%{$fg[cyan]%}%c%{$reset_color%}"
 PROMPT+="\$vcs_info_msg_0_ "
