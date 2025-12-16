@@ -38,6 +38,7 @@ return {
     --   },
     -- })
     -- vim.lsp.enable("ruff")
+    --
     -- vim.lsp.config("ty", {
     --   settings = {
     --     ty = {
@@ -56,7 +57,7 @@ return {
         vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
         -- vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
         vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, opts)
-        -- vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+        vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
         vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
       end,
     })

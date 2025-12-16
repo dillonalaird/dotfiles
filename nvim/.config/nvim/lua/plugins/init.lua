@@ -22,14 +22,6 @@ return {
 		end,
 	},
 	{
-		"filipdutescu/renamer.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("renamer").setup({})
-			vim.keymap.set("n", "<leader>rn", "<cmd>lua require('renamer').rename()<CR>")
-		end,
-	},
-	{
 		"windwp/nvim-ts-autotag",
 		config = function()
 			require("nvim-ts-autotag").setup({})
