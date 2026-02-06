@@ -2,31 +2,37 @@ return {
   "neovim/nvim-lspconfig",
   config = function()
     -- vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
+    vim.lsp.config("lua_ls", {
+      cmd = { "lua-language-server" }
+    })
     vim.lsp.enable("lua_ls")
+    vim.lsp.config("ts_ls", {
+      cmd = { "typescript-language-server" }
+    })
     vim.lsp.enable("ts_ls")
     -- vim.lsp.enable("pyright")
 
     -- Configure basedpyright with diagnostic settings
-    vim.lsp.config("basedpyright", {
-      settings = {
-        basedpyright = {
-          analysis = {
-            diagnosticMode = "openFilesOnly",
-            autoSearchPaths = true,
-            useLibraryCodeForTypes = true,
-            typeCheckingMode = "standard",
-          },
-        },
-      },
-      handlers = {
-        ["textDocument/publishDiagnostics"] = vim.lsp.with(
-          vim.lsp.diagnostic.on_publish_diagnostics, {
-            update_in_insert = true,
-          }
-        ),
-      },
-    })
-    vim.lsp.enable("basedpyright")
+    -- vim.lsp.config("basedpyright", {
+    --   settings = {
+    --     basedpyright = {
+    --       analysis = {
+    --         diagnosticMode = "openFilesOnly",
+    --         autoSearchPaths = true,
+    --         useLibraryCodeForTypes = true,
+    --         typeCheckingMode = "standard",
+    --       },
+    --     },
+    --   },
+    --   handlers = {
+    --     ["textDocument/publishDiagnostics"] = vim.lsp.with(
+    --       vim.lsp.diagnostic.on_publish_diagnostics, {
+    --         update_in_insert = true,
+    --       }
+    --     ),
+    --   },
+    -- })
+    -- vim.lsp.enable("basedpyright")
 
     -- vim.lsp.config("ruff", {
     --   handlers = {
@@ -38,15 +44,18 @@ return {
     --   },
     -- })
     -- vim.lsp.enable("ruff")
-    --
-    -- vim.lsp.config("ty", {
-    --   settings = {
-    --     ty = {
-    --       diagnosticMode = "workspace",
-    --     },
-    --   },
-    -- })
-    -- vim.lsp.enable("ty")
+
+    vim.lsp.config("ty", {
+      cmd_env = {
+        CONDA_PREFIX = "/Users/dillon/.pixi/envs/python",
+      },
+      settings = {
+        ty = {
+          diagnosticMode = "workspace",
+        },
+      },
+    })
+    vim.lsp.enable("ty")
 
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
