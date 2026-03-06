@@ -1,7 +1,6 @@
-return {
-	require("plugins.treesitter"),
-	require("plugins.playground"),
-	require("plugins.lualine"),
+	return {
+		require("plugins.treesitter"),
+		require("plugins.lualine"),
 	require("plugins.cmp"),
 	require("plugins.lsp"),
 	require("plugins.claudecode"),
@@ -12,7 +11,7 @@ return {
 	"nvim-treesitter/nvim-treesitter-context",
 	"tpope/vim-commentary",
 	"tpope/vim-fugitive",
-	"github/copilot.vim",
+	-- "github/copilot.vim",
 	"chrisbra/csv.vim",
 	"chrisbra/Colorizer",
 	{

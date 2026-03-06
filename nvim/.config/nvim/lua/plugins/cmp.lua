@@ -39,12 +39,12 @@ return {
     "kdheepak/cmp-latex-symbols",
 	},
 	config = function()
-		local cmp = require("cmp")
-		cmp.setup({
-			window = {
-				completion = cmp.config.window.bordered(),
-				documentation = cmp.config.window.bordered(),
-			},
+			local cmp = require("cmp")
+			cmp.setup({
+				window = {
+					completion = cmp.config.window.bordered({ border = "rounded" }),
+					documentation = cmp.config.window.bordered({ border = "rounded" }),
+				},
 			formatting = {
 				format = function(entry, vim_item)
 					-- Kind icons

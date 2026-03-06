@@ -10,6 +10,7 @@ return {
       cmd = { "typescript-language-server" }
     })
     vim.lsp.enable("ts_ls")
+
     -- vim.lsp.enable("pyright")
 
     -- Configure basedpyright with diagnostic settings

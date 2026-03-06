@@ -41,13 +41,13 @@ return {
 		end,
 	},
 
-	config = function()
-		require("nvim-treesitter.configs").setup({
-			ensure_installed = { "python", "lua", "javascript", "typescript", "tsx", "vim", "markdown" },
-			sync_install = true,
-			highlight = { enable = true },
-			-- autotag = { enable = true }, -- this is for nvim-ts-autotag
-			indent = { enable = true }, -- not working on svelte for some reason
+		config = function()
+			require("nvim-treesitter").setup({
+				ensure_installed = { "python", "lua", "javascript", "typescript", "tsx", "vim", "markdown" },
+				sync_install = true,
+				highlight = { enable = true },
+				-- autotag = { enable = true }, -- this is for nvim-ts-autotag
+				indent = { enable = true }, -- not working on svelte for some reason
 		})
 	end,
 }
